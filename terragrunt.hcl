@@ -1,10 +1,6 @@
 locals{
   region_var  = read_terragrunt_config(find_in_parent_folders("region.hcl"))
-  account     = read_terragrunt_config(find_in_parent_folders("account.hcl"))
-
   region_name = local.region_var.locals.region
-  access_key  = local.account.locals.access_key
-  secret_key  = local.account.locals.secret_key
 }
 
 generate "provider" {

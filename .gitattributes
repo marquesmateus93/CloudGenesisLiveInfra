@@ -1,0 +1,1 @@
+dev/ec2/key_files/** filter=git-crypt diff=git-crypt

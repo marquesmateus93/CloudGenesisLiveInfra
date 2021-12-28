@@ -1,7 +1,7 @@
 terraform {
     #source = "github.com/marquesmateus93/CloudGenesis//modules/ec2?ref=v0.0.3"
-    #source = "github.com/marquesmateus93/CloudGenesis//modules/ec2"
-    source = "../../../CloudGenesis/modules/ec2"
+    source = "github.com/marquesmateus93/CloudGenesis//modules/ec2"
+    #source = "../../../CloudGenesis/modules/ec2"
 }
 
 include {
@@ -13,7 +13,7 @@ locals {
 }
 
 inputs = {
-  ssh-key = file("key_files/cloud_genesis_marques")
+  ssh-public-key = file("key_files/cloud_genesis_marques.pub")
 
   azs = local.zones.locals.azs
   account_id = "${get_aws_account_id()}"

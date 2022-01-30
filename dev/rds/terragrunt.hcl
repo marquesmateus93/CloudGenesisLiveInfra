@@ -1,7 +1,5 @@
 terraform {
-  #source = "github.com/marquesmateus93/CloudGenesis//modules/rds?ref=v0.0.3"
-  #source = "github.com/marquesmateus93/CloudGenesis//modules/rds"
-  source = "../../../CloudGenesis/modules/rds"
+  source = "github.com/marquesmateus93/CloudGenesis//modules/rds"
 }
 
 include {
@@ -17,6 +15,7 @@ dependency "vpc" {
 }
 
 inputs = {
+  identifier_name   = "portal-noticias"
   database_name     = "portal_noticias"
   database_username = "admin"
   database_password = "1q2w3e4r5t"

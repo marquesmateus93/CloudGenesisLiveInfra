@@ -1,7 +1,5 @@
 terraform {
-    #source = "github.com/marquesmateus93/CloudGenesis//modules/ec2?ref=v0.0.3"
-    #source = "github.com/marquesmateus93/CloudGenesis//modules/ec2"
-    source = "../../../CloudGenesis/modules/vpc"
+    source = "github.com/marquesmateus93/CloudGenesis//modules/vpc"
 }
 
 include {
